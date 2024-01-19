@@ -58,22 +58,21 @@ body {
 }
 
 .column {
-   /* border-style: solid;
-    border-color: green; */
+   border-style: solid;
+    border-color: var(--bg-color);
    display: flex;
    flex-direction: column;
-   margin-bottom: 1rem;
+   /* margin-bottom: 1rem; */
 }
 
 img {
    display: flex;
-   margin-bottom: 1rem;
 }
 
 .event {
    display: flex;
    flex-direction: row;
-   justify-content: space-between;
+   /* justify-content: space-between; */
 }
 
 .live-score {
@@ -85,18 +84,30 @@ img {
    margin: 1rem;
 }
 
+.score {
+   color: #00D323;
+}
+
 .odd-boxes {
    display: flex;
    flex-direction: row;
-   width: 30hv;
    justify-content: space-between;
-   flex-grow: 2;
+   text-align: center;
+
+   /* width: 30wv; */
+   /* flex-grow: 2; */
 }
 
 .box {
+   background-color: #346090;
+   width: 50px;
+   height: 50px;
    margin: 0.5rem;
-   border-style: solid;
-   border-color: yellow;
+   /* border-style: solid;
+   border-color: #346090; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 /* .first3,
