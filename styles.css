@@ -22,7 +22,7 @@
 
 html {
    font-size: 62.5%;
-   overflow-x: hidden;
+   /* overflow-x: hidden; */
 }
 
 body {
@@ -47,7 +47,8 @@ body {
 }
 
 .aside {
-   width: 7vw;
+   width: 30vw;
+   height: 100vh;
 }
 
 .hero {
@@ -55,6 +56,7 @@ body {
     border-color: yellow; */
    display: flex;
    flex-direction: column;
+   width: 40vw;
 }
 
 .column {
@@ -67,9 +69,11 @@ body {
 
 img {
    display: flex;
+   background-repeat: no-repeat;
 }
 
 .event {
+   background-color: var(--second-bg-color);
    display: flex;
    flex-direction: row;
    /* justify-content: space-between; */
@@ -84,8 +88,15 @@ img {
    margin: 1rem;
 }
 
+
+
 .score {
    color: #00D323;
+
+}
+
+.score p {
+   /* text-align: right; */
 }
 
 .odd-boxes {
@@ -101,8 +112,8 @@ img {
 .box {
    background-color: #346090;
    width: 50px;
-   height: 50px;
-   margin: 0.5rem;
+   height: 48px;
+   margin: 0.1rem;
    /* border-style: solid;
    border-color: #346090; */
    display: flex;
@@ -110,17 +121,116 @@ img {
    align-items: center;
 }
 
-/* .first3,
-.second3,
-.third3 {
-} */
 
 .list {
    display: flex;
    flex-direction: row;
    justify-content: center;
+   margin: 0.3rem;
+   /* gap: 0.2px; */
+}
+
+
+
+.list p {
+   font-family: "Oswald", sans-serif;
 }
 
 .footer {
-   height: 40vh;
+   height: 88vh;
 }
+
+.participants p {
+   color: #68829c;
+}
+
+#box7, #box8 {
+   display: flex;
+   flex-direction: column;
+
+}
+
+#box70, #box80 {
+   font-size: 0.8em;
+   color: #95b9df;
+   font-weight: 100;
+   text-align: center;
+   line-height: 0.8
+}
+
+#box1 {
+   position: relative;
+}
+
+#box1::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   border-width: 0px 10px 10px 0px; 
+   border-color: transparent #00d323 transparent transparent; 
+   border-style: solid;
+   margin: 2px;
+}
+
+
+#box3 {
+   position: relative;
+   background-color: #e7b900;
+   color: #000;
+}
+
+#box3::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   border-width: 0px 10px 10px 0px; 
+   border-color: transparent #000 transparent transparent; 
+   border-style: solid;
+   margin: 2px;
+}
+
+#box4, #box6 {
+   width: 55px;
+   height: 48px;
+}
+
+#box4 {
+   position: relative;
+}
+
+#box4::before {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   border-width: 0 0px 10px 10px; 
+   border-color: transparent transparent #ff5e5e transparent; 
+   border-style: solid;
+   margin: 2px;
+}
+
+#box5 {
+   background-color: var(--second-bg-color);
+   width: 30px;
+   height: 48px;
+   font-size: 0.8em;
+   color: #95b9df;
+   font-weight: 100;
+}
+
+#box7, #box8 {
+   width: 60px;
+   height: 48px;
+} 
+
+
+
+
+
+.favorite {
+   background-image: url('./fav');
+}
+
+
