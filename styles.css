@@ -38,26 +38,29 @@ body {
 .section {
    background-color: var(--second-bg-color);
    flex: content;
-   flex-direction: row;
    margin: 0.3rem;
 }
 
 .aside {
-   width: 30vw;
-   height: 100vh;
+   display: flex;
+   width: 25vw;
+   height: auto;
 }
 
 .hero {
    display: flex;
    flex-direction: column;
-   width: 4vw;
+   width: 50vw;
 }
 
 .column {
-   border-style: solid;
-   border-color: var(--bg-color);
    display: flex;
    flex-direction: column;
+}
+
+.ball {
+   border-bottom: solid;
+   border-color: var(--bg-color);
 }
 
 img {
@@ -66,7 +69,8 @@ img {
 }
 
 .event {
-   background-color: var(--second-bg-color);
+   border-top: solid;
+   border-color: var(--bg-color);
    display: flex;
    flex-direction: row;
 }
@@ -74,27 +78,31 @@ img {
 .live-score {
    display: flex;
    flex-direction: row;
-   width: 4vh;
+   width: 5vh;
    justify-content: space-between;
    align-items: stretch;
    flex-grow: 1;
-   margin: 0.5rem;
-   /* padding-bottom: 5px; */
+   margin-top: 0.5rem;
 }
 
 .participants {
    display: flex;
    flex-direction: column;
    height: 4vh;
-   width: 10vw;
+   width: 20vw;
 }
 
 .participants h4 {
-   padding-bottom: 0.4rem;
-   font-size: 1.1em;
+   padding-left: 0.5rem;
+   padding-bottom: 0.7rem;
+   font-family: 'Oswald', sans-serif;
+   line-height: 9px;
 }
 
 .participants p {
+   padding-left: 0.5rem;
+   line-height: 10px;
+   padding-bottom: 0.7rem;
 }
 
 .score {
@@ -103,7 +111,9 @@ img {
 }
 
 .score p {
-   padding-bottom: 0.4rem;
+   padding-bottom: 0.8rem;
+   font-family: 'Oswald', sans-serif;
+   line-height: 9px;
 }
 
 .odd-boxes {
@@ -121,6 +131,7 @@ img {
    display: flex;
    justify-content: center;
    align-items: center;
+   box-shadow: inset 0px -4px #10346090;
 }
 
 .list {
@@ -135,26 +146,28 @@ img {
 }
 
 .footer {
-   height: auto;
+   height: 50vh;
+   border-top: solid;
+   border-color: var(--bg-color);
 }
 
 .participants p {
    color: #68829c;
 }
 
-#box7,
-#box8 {
-   display: flex;
-   flex-direction: column;
+.favorite {
+   background-image: url('./fav');
 }
+
 
 #box70,
 #box80 {
+   font-family: 'Roboto', sans-serif;
    font-size: 0.8em;
-   color: #95b9df;
-   font-weight: 100;
+   color: #6095b9df;
+   font-weight: 400;
    text-align: center;
-   line-height: 0.8;
+   line-height: 0.8em;
 }
 
 #box1 {
@@ -211,16 +224,19 @@ img {
 }
 
 #box5 {
+   font-family: 'Roboto', sans-serif;
    background-color: var(--second-bg-color);
    width: 30px;
    height: 48px;
    font-size: 0.8em;
-   color: #95b9df;
-   font-weight: 100;
+   color: #7794b2;
+   font-weight: 400;
 }
 
 #box7,
 #box8 {
+   display: flex;
+   flex-direction: column;
    width: 60px;
    height: 48px;
 }
@@ -235,6 +251,20 @@ img {
    background-color: #122a45;
 }
 
-.favorite {
-   background-image: url('./fav');
+
+
+@media (max-width: 768px) {
+   .aside,
+   .second3,
+   .third3 {
+      display: none;
+   }
+   .participants {
+      width: 35vw;
+      white-space: nowrap;
+   }
+
+   .first3 {
+      width: 40vw;
+   }
 }
